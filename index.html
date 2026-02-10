@@ -4,14 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LixiNest - Organisateur de bureau Windows</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: #0a0a1a;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
         .hero {
             min-height: 65vh;
             display: flex;
@@ -40,10 +34,12 @@
             100% { transform: translate(2%, -2%); }
         }
         .hero > * { position: relative; z-index: 1; }
-        .hero-icon {
-            font-size: 4rem;
+        .hero-logo {
+            width: 80px;
+            height: 80px;
             margin-bottom: 1rem;
             animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(110, 198, 255, 0.3));
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -84,7 +80,6 @@
             transition: border-color 0.3s, transform 0.2s;
         }
         .badge:hover { border-color: #6ec6ff; transform: translateY(-2px); }
-        .badge .emoji { font-size: 1rem; }
 
         .section-title {
             text-align: center;
@@ -92,11 +87,7 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        .section-title h2 {
-            font-size: 1.8rem;
-            color: #e0e0e0;
-            margin-bottom: 0.5rem;
-        }
+        .section-title h2 { font-size: 1.8rem; color: #e0e0e0; margin-bottom: 0.5rem; }
         .section-title p { color: #7070a0; }
 
         .features {
@@ -107,21 +98,37 @@
             margin: 0 auto;
             padding: 2rem 2rem 3rem;
         }
+        .feature-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
         .feature {
             background: #12122a;
             border: 1px solid #2a2a4a;
             border-radius: 12px;
             padding: 1.75rem;
-            transition: border-color 0.3s, transform 0.3s;
+            transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
-        .feature:hover { border-color: #4a4a8a; transform: translateY(-4px); }
-        .feature-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
-        .feature h3 {
-            color: #6ec6ff;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+        .feature:hover {
+            border-color: #4a4a8a;
+            transform: translateY(-6px);
+            box-shadow: 0 8px 30px rgba(110, 198, 255, 0.08);
         }
-        .feature p { color: #a0a0b8; font-size: 0.95rem; }
+        .feature-icon { font-size: 2.2rem; margin-bottom: 0.75rem; display: block; }
+        .feature h3 { color: #6ec6ff; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .feature p { color: #a0a0b8; font-size: 0.95rem; margin-bottom: 0.75rem; }
+        .feature-cta {
+            font-size: 0.8rem;
+            color: #a78bfa;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .feature:hover .feature-cta { opacity: 1; }
 
         .cta {
             text-align: center;
@@ -135,31 +142,30 @@
             border-radius: 16px;
             padding: 2rem 3rem;
         }
-        .cta-box p { color: #a0a0b8; margin-bottom: 1rem; }
+        .cta-box p { color: #a0a0b8; margin-bottom: 1rem; font-size: 1.1rem; }
         .cta-box .emoji-row { font-size: 1.5rem; letter-spacing: 0.5rem; }
-
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #606080;
-            border-top: 1px solid #1a1a3a;
-        }
-        footer a { color: #6ec6ff; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <a href="index.html" class="nav-brand"><img src="logo.png" alt="LixiNest"> LixiNest</a>
+        <div class="nav-links">
+            <a href="privacy.html">Confidentialit&eacute;</a>
+            <a href="terms.html">Conditions</a>
+        </div>
+    </nav>
+
     <div class="hero">
-        <div class="hero-icon">🪺</div>
+        <img src="logo.png" alt="LixiNest Logo" class="hero-logo">
         <h1>LixiNest</h1>
         <div class="hero-tagline">Desktop Organizer for Windows</div>
         <p>Organisez votre bureau Windows avec des zones personnalisables, des widgets intelligents et la synchronisation Google.</p>
         <div class="badges">
-            <span class="badge"><span class="emoji">⚡</span> WPF .NET 8</span>
-            <span class="badge"><span class="emoji">📅</span> Google Calendar</span>
-            <span class="badge"><span class="emoji">✅</span> Google Tasks</span>
-            <span class="badge"><span class="emoji">🖥️</span> Multi-&eacute;crans</span>
-            <span class="badge"><span class="emoji">🔒</span> Chiffr&eacute; DPAPI</span>
+            <span class="badge">⚡ WPF .NET 8</span>
+            <span class="badge">📅 Google Calendar</span>
+            <span class="badge">✅ Google Tasks</span>
+            <span class="badge">🖥️ Multi-&eacute;crans</span>
+            <span class="badge">🔒 Chiffr&eacute; DPAPI</span>
         </div>
     </div>
 
@@ -169,36 +175,54 @@
     </div>
 
     <div class="features">
-        <div class="feature">
-            <span class="feature-icon">📂</span>
-            <h3>Zones de bureau</h3>
-            <p>Organisez vos ic&ocirc;nes dans des zones visuelles semi-transparentes avec th&egrave;mes personnalisables et 8 styles d'animation.</p>
-        </div>
-        <div class="feature">
-            <span class="feature-icon">🧩</span>
-            <h3>Widgets</h3>
-            <p>Calendrier, horloge, m&eacute;t&eacute;o, notes, todo-list et moniteur syst&egrave;me directement sur votre bureau.</p>
-        </div>
-        <div class="feature">
-            <span class="feature-icon">🔗</span>
-            <h3>Google int&eacute;gr&eacute;</h3>
-            <p>Synchronisez vos &eacute;v&eacute;nements Calendar, vos t&acirc;ches Tasks et vos param&egrave;tres entre plusieurs PC.</p>
-        </div>
-        <div class="feature">
-            <span class="feature-icon">🖥️</span>
-            <h3>Multi-&eacute;crans</h3>
-            <p>Support complet des configurations multi-moniteurs avec profils d'affichage automatiques.</p>
-        </div>
-        <div class="feature">
-            <span class="feature-icon">👻</span>
-            <h3>Quick Hide</h3>
-            <p>Double-clic sur le bureau pour masquer ou afficher toutes les zones instantan&eacute;ment.</p>
-        </div>
-        <div class="feature">
-            <span class="feature-icon">🛡️</span>
-            <h3>S&eacute;curis&eacute;</h3>
-            <p>Tokens OAuth chiffr&eacute;s avec DPAPI Windows. Aucune donn&eacute;e envoy&eacute;e &agrave; des tiers.</p>
-        </div>
+        <a href="zones.html" class="feature-link">
+            <div class="feature">
+                <span class="feature-icon">📂</span>
+                <h3>Zones de bureau</h3>
+                <p>Organisez vos ic&ocirc;nes dans des zones visuelles semi-transparentes avec 11 th&egrave;mes et 8 animations.</p>
+                <span class="feature-cta">En savoir plus &rarr;</span>
+            </div>
+        </a>
+        <a href="widgets.html" class="feature-link">
+            <div class="feature">
+                <span class="feature-icon">🧩</span>
+                <h3>Widgets</h3>
+                <p>Calendrier, horloge, m&eacute;t&eacute;o, notes, todo-list et moniteur syst&egrave;me sur votre bureau.</p>
+                <span class="feature-cta">En savoir plus &rarr;</span>
+            </div>
+        </a>
+        <a href="google.html" class="feature-link">
+            <div class="feature">
+                <span class="feature-icon">🔗</span>
+                <h3>Google int&eacute;gr&eacute;</h3>
+                <p>Synchronisez vos &eacute;v&eacute;nements Calendar, vos t&acirc;ches Tasks et vos param&egrave;tres entre PC.</p>
+                <span class="feature-cta">En savoir plus &rarr;</span>
+            </div>
+        </a>
+        <a href="multiscreen.html" class="feature-link">
+            <div class="feature">
+                <span class="feature-icon">🖥️</span>
+                <h3>Multi-&eacute;crans</h3>
+                <p>Support complet multi-moniteurs avec profils d'affichage automatiques.</p>
+                <span class="feature-cta">En savoir plus &rarr;</span>
+            </div>
+        </a>
+        <a href="quickhide.html" class="feature-link">
+            <div class="feature">
+                <span class="feature-icon">👻</span>
+                <h3>Quick Hide</h3>
+                <p>Double-clic sur le bureau pour masquer ou afficher toutes les zones instantan&eacute;ment.</p>
+                <span class="feature-cta">En savoir plus &rarr;</span>
+            </div>
+        </a>
+        <a href="security.html" class="feature-link">
+            <div class="feature">
+                <span class="feature-icon">🛡️</span>
+                <h3>S&eacute;curis&eacute;</h3>
+                <p>Tokens OAuth chiffr&eacute;s avec DPAPI Windows. Aucune donn&eacute;e envoy&eacute;e &agrave; des tiers.</p>
+                <span class="feature-cta">En savoir plus &rarr;</span>
+            </div>
+        </a>
     </div>
 
     <div class="cta">

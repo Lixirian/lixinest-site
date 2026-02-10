@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LixiNest - S&eacute;curit&eacute;</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html" class="nav-brand"><img src="logo.png" alt="LixiNest"> LixiNest</a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="privacy.html">Confidentialit&eacute;</a>
+        </div>
+    </nav>
+
+    <div class="feature-header">
+        <span class="icon">🛡️</span>
+        <h1>S&eacute;curit&eacute;</h1>
+        <p>Vos donn&eacute;es restent sur votre machine, chiffr&eacute;es et prot&eacute;g&eacute;es.</p>
+    </div>
+
+    <div class="content">
+        <div class="key-points">
+            <div class="key-point">
+                <span class="kp-icon">🔐</span>
+                <div class="kp-title">OAuth 2.0 + PKCE</div>
+                <div class="kp-desc">Standard le plus s&eacute;curis&eacute;</div>
+            </div>
+            <div class="key-point">
+                <span class="kp-icon">🔑</span>
+                <div class="kp-title">DPAPI Windows</div>
+                <div class="kp-desc">Chiffrement li&eacute; &agrave; votre session</div>
+            </div>
+            <div class="key-point">
+                <span class="kp-icon">🌐</span>
+                <div class="kp-title">HTTPS uniquement</div>
+                <div class="kp-desc">Communications chiffr&eacute;es</div>
+            </div>
+            <div class="key-point">
+                <span class="kp-icon">🚫</span>
+                <div class="kp-title">Z&eacute;ro tracking</div>
+                <div class="kp-desc">Aucune t&eacute;l&eacute;m&eacute;trie</div>
+            </div>
+        </div>
+
+        <h2>🔑 Chiffrement DPAPI</h2>
+        <p>Tous les tokens d'authentification Google sont chiffr&eacute;s avec <strong>Windows Data Protection API (DPAPI)</strong>. Cette technologie Microsoft lie le chiffrement &agrave; votre compte utilisateur Windows &mdash; m&ecirc;me si quelqu'un copie les fichiers, il ne peut pas les d&eacute;chiffrer sans &ecirc;tre connect&eacute; &agrave; votre session.</p>
+
+        <div class="mockup">
+            <div class="mockup-titlebar">
+                <span class="mockup-dot red"></span>
+                <span class="mockup-dot yellow"></span>
+                <span class="mockup-dot green"></span>
+                <span class="mockup-title">Flux de s&eacute;curit&eacute;</span>
+            </div>
+            <div class="mockup-body" style="justify-content: center; gap: 1rem; padding: 1rem; flex-wrap: nowrap;">
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem;">🔓</div>
+                    <div style="font-size: 0.7rem; color: #7070a0;">Token brut</div>
+                </div>
+                <div style="color: #3a3a6a; align-self: center;">&rarr;</div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem;">🔑</div>
+                    <div style="font-size: 0.7rem; color: #7070a0;">DPAPI</div>
+                </div>
+                <div style="color: #3a3a6a; align-self: center;">&rarr;</div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem;">🔒</div>
+                    <div style="font-size: 0.7rem; color: #7070a0;">Fichier chiffr&eacute;</div>
+                </div>
+                <div style="color: #3a3a6a; align-self: center;">&rarr;</div>
+                <div style="text-align: center;">
+                    <div style="font-size: 1.5rem;">💾</div>
+                    <div style="font-size: 0.7rem; color: #7070a0;">%APPDATA%</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>🔐 OAuth 2.0 avec PKCE</h2>
+        <p>L'authentification Google utilise le protocole <strong>OAuth 2.0 avec PKCE</strong> (Proof Key for Code Exchange). Ce m&eacute;canisme emp&ecirc;che l'interception du code d'autorisation, m&ecirc;me si un logiciel malveillant &eacute;coute sur le m&ecirc;me port.</p>
+        <ul>
+            <li>🔹 Vous vous connectez directement sur la page Google</li>
+            <li>🔹 LixiNest ne voit <strong>jamais</strong> votre mot de passe</li>
+            <li>🔹 Un code al&eacute;atoire unique (code_verifier) s&eacute;curise l'&eacute;change</li>
+            <li>🔹 Le param&egrave;tre <code>state</code> prot&egrave;ge contre les attaques CSRF</li>
+        </ul>
+
+        <h2>🚫 Aucune collecte</h2>
+        <p>LixiNest est une application <strong>100% locale</strong>. Aucune donn&eacute;e n'est envoy&eacute;e &agrave; un serveur tiers. Les seules communications r&eacute;seau sont :</p>
+        <ul>
+            <li><strong>APIs Google</strong> &mdash; uniquement si vous connectez votre compte</li>
+            <li><strong>Open-Meteo</strong> &mdash; uniquement pour le widget m&eacute;t&eacute;o (coordonn&eacute;es de la ville, pas de donn&eacute;es personnelles)</li>
+        </ul>
+        <p>Pas d'analytics, pas de t&eacute;l&eacute;m&eacute;trie, pas de cookies, pas de traceurs. Jamais.</p>
+
+        <h2>🗑️ R&eacute;vocation</h2>
+        <p>Vous gardez le contr&ocirc;le total :</p>
+        <ul>
+            <li>D&eacute;connectez votre compte Google depuis les param&egrave;tres de LixiNest</li>
+            <li>R&eacute;voquez l'acc&egrave;s depuis <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a></li>
+            <li>Supprimez toutes les donn&eacute;es locales en supprimant <code>%APPDATA%/LixiNest/</code></li>
+        </ul>
+    </div>
+
+    <div class="page-nav">
+        <a href="zones.html">📂 Zones</a>
+        <a href="widgets.html">🧩 Widgets</a>
+        <a href="google.html">🔗 Google</a>
+        <a href="multiscreen.html">🖥️ Multi-&eacute;crans</a>
+        <a href="quickhide.html">👻 Quick Hide</a>
+    </div>
+
+    <footer>
+        <p><a href="privacy.html">🔒 Confidentialit&eacute;</a> &middot; <a href="terms.html">📄 Conditions</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2024-2026 LixiNest</p>
+    </footer>
+</body>
+</html>
