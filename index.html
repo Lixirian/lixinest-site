@@ -13,7 +13,7 @@
             line-height: 1.6;
         }
         .hero {
-            min-height: 60vh;
+            min-height: 65vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -21,14 +21,48 @@
             text-align: center;
             padding: 4rem 2rem;
             background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a0a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 50%, rgba(110, 198, 255, 0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 50%, rgba(167, 139, 250, 0.06) 0%, transparent 50%);
+            animation: glow 8s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(2%, -2%); }
+        }
+        .hero > * { position: relative; z-index: 1; }
+        .hero-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             background: linear-gradient(135deg, #6ec6ff, #a78bfa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+        .hero-tagline {
+            font-size: 1.05rem;
+            color: #7070a0;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
         }
         .hero p {
             font-size: 1.25rem;
@@ -36,26 +70,74 @@
             max-width: 600px;
             margin-bottom: 2rem;
         }
+        .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #1a1a3e;
+            border: 1px solid #3a3a6a;
+            border-radius: 8px;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            color: #a78bfa;
+            transition: border-color 0.3s, transform 0.2s;
+        }
+        .badge:hover { border-color: #6ec6ff; transform: translateY(-2px); }
+        .badge .emoji { font-size: 1rem; }
+
+        .section-title {
+            text-align: center;
+            padding: 3rem 2rem 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+        .section-title p { color: #7070a0; }
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             max-width: 1000px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 2rem 2rem 3rem;
         }
         .feature {
             background: #12122a;
             border: 1px solid #2a2a4a;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.75rem;
+            transition: border-color 0.3s, transform 0.3s;
         }
+        .feature:hover { border-color: #4a4a8a; transform: translateY(-4px); }
+        .feature-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
         .feature h3 {
             color: #6ec6ff;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
         .feature p { color: #a0a0b8; font-size: 0.95rem; }
+
+        .cta {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(180deg, transparent 0%, #0f0f28 100%);
+        }
+        .cta-box {
+            display: inline-block;
+            background: #12122a;
+            border: 1px solid #3a3a6a;
+            border-radius: 16px;
+            padding: 2rem 3rem;
+        }
+        .cta-box p { color: #a0a0b8; margin-bottom: 1rem; }
+        .cta-box .emoji-row { font-size: 1.5rem; letter-spacing: 0.5rem; }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -64,59 +146,74 @@
         }
         footer a { color: #6ec6ff; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-        .badge {
-            display: inline-block;
-            background: #1a1a3e;
-            border: 1px solid #3a3a6a;
-            border-radius: 8px;
-            padding: 0.4rem 1rem;
-            font-size: 0.85rem;
-            color: #a78bfa;
-            margin: 0.25rem;
-        }
     </style>
 </head>
 <body>
     <div class="hero">
+        <div class="hero-icon">🪺</div>
         <h1>LixiNest</h1>
-        <p>Organisateur de bureau Windows avec zones personnalisables, widgets et synchronisation Google.</p>
-        <div>
-            <span class="badge">WPF .NET 8</span>
-            <span class="badge">Google Calendar</span>
-            <span class="badge">Google Tasks</span>
-            <span class="badge">Multi-screen</span>
+        <div class="hero-tagline">Desktop Organizer for Windows</div>
+        <p>Organisez votre bureau Windows avec des zones personnalisables, des widgets intelligents et la synchronisation Google.</p>
+        <div class="badges">
+            <span class="badge"><span class="emoji">⚡</span> WPF .NET 8</span>
+            <span class="badge"><span class="emoji">📅</span> Google Calendar</span>
+            <span class="badge"><span class="emoji">✅</span> Google Tasks</span>
+            <span class="badge"><span class="emoji">🖥️</span> Multi-&eacute;crans</span>
+            <span class="badge"><span class="emoji">🔒</span> Chiffr&eacute; DPAPI</span>
         </div>
+    </div>
+
+    <div class="section-title">
+        <h2>✨ Fonctionnalit&eacute;s</h2>
+        <p>Tout ce qu'il faut pour un bureau organis&eacute; et productif</p>
     </div>
 
     <div class="features">
         <div class="feature">
+            <span class="feature-icon">📂</span>
             <h3>Zones de bureau</h3>
-            <p>Organisez vos icones de bureau dans des zones visuelles semi-transparentes avec themes personnalisables et animations.</p>
+            <p>Organisez vos ic&ocirc;nes dans des zones visuelles semi-transparentes avec th&egrave;mes personnalisables et 8 styles d'animation.</p>
         </div>
         <div class="feature">
+            <span class="feature-icon">🧩</span>
             <h3>Widgets</h3>
-            <p>Calendrier, horloge, meteo, notes, todo-list et moniteur systeme directement sur votre bureau.</p>
+            <p>Calendrier, horloge, m&eacute;t&eacute;o, notes, todo-list et moniteur syst&egrave;me directement sur votre bureau.</p>
         </div>
         <div class="feature">
-            <h3>Google integre</h3>
-            <p>Synchronisez vos evenements Calendar, vos taches Tasks et vos parametres entre plusieurs PC.</p>
+            <span class="feature-icon">🔗</span>
+            <h3>Google int&eacute;gr&eacute;</h3>
+            <p>Synchronisez vos &eacute;v&eacute;nements Calendar, vos t&acirc;ches Tasks et vos param&egrave;tres entre plusieurs PC.</p>
         </div>
         <div class="feature">
-            <h3>Multi-ecrans</h3>
+            <span class="feature-icon">🖥️</span>
+            <h3>Multi-&eacute;crans</h3>
             <p>Support complet des configurations multi-moniteurs avec profils d'affichage automatiques.</p>
         </div>
         <div class="feature">
+            <span class="feature-icon">👻</span>
             <h3>Quick Hide</h3>
-            <p>Double-clic sur le bureau pour masquer/afficher toutes les zones instantanement.</p>
+            <p>Double-clic sur le bureau pour masquer ou afficher toutes les zones instantan&eacute;ment.</p>
         </div>
         <div class="feature">
-            <h3>Securise</h3>
-            <p>Tokens OAuth chiffres avec DPAPI Windows. Aucune donnee envoyee a des tiers.</p>
+            <span class="feature-icon">🛡️</span>
+            <h3>S&eacute;curis&eacute;</h3>
+            <p>Tokens OAuth chiffr&eacute;s avec DPAPI Windows. Aucune donn&eacute;e envoy&eacute;e &agrave; des tiers.</p>
+        </div>
+    </div>
+
+    <div class="cta">
+        <div class="cta-box">
+            <p>🪺 Application de bureau Windows gratuite</p>
+            <div class="emoji-row">📂 📅 ✅ 🌤️ 📝 ⏰</div>
         </div>
     </div>
 
     <footer>
-        <p><a href="privacy.html">Politique de confidentialite</a> | <a href="terms.html">Conditions d'utilisation</a></p>
+        <p>
+            <a href="privacy.html">🔒 Politique de confidentialit&eacute;</a>
+            &nbsp;&middot;&nbsp;
+            <a href="terms.html">📄 Conditions d'utilisation</a>
+        </p>
         <p style="margin-top: 0.5rem;">&copy; 2024-2026 LixiNest</p>
     </footer>
 </body>
