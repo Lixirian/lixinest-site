@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LixiNest - Organisateur de bureau Windows</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0a0a1a 100%);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #6ec6ff, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: #a0a0b8;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .feature {
+            background: #12122a;
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+        .feature h3 {
+            color: #6ec6ff;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .feature p { color: #a0a0b8; font-size: 0.95rem; }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #606080;
+            border-top: 1px solid #1a1a3a;
+        }
+        footer a { color: #6ec6ff; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .badge {
+            display: inline-block;
+            background: #1a1a3e;
+            border: 1px solid #3a3a6a;
+            border-radius: 8px;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            color: #a78bfa;
+            margin: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>LixiNest</h1>
+        <p>Organisateur de bureau Windows avec zones personnalisables, widgets et synchronisation Google.</p>
+        <div>
+            <span class="badge">WPF .NET 8</span>
+            <span class="badge">Google Calendar</span>
+            <span class="badge">Google Tasks</span>
+            <span class="badge">Multi-screen</span>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <h3>Zones de bureau</h3>
+            <p>Organisez vos icones de bureau dans des zones visuelles semi-transparentes avec themes personnalisables et animations.</p>
+        </div>
+        <div class="feature">
+            <h3>Widgets</h3>
+            <p>Calendrier, horloge, meteo, notes, todo-list et moniteur systeme directement sur votre bureau.</p>
+        </div>
+        <div class="feature">
+            <h3>Google integre</h3>
+            <p>Synchronisez vos evenements Calendar, vos taches Tasks et vos parametres entre plusieurs PC.</p>
+        </div>
+        <div class="feature">
+            <h3>Multi-ecrans</h3>
+            <p>Support complet des configurations multi-moniteurs avec profils d'affichage automatiques.</p>
+        </div>
+        <div class="feature">
+            <h3>Quick Hide</h3>
+            <p>Double-clic sur le bureau pour masquer/afficher toutes les zones instantanement.</p>
+        </div>
+        <div class="feature">
+            <h3>Securise</h3>
+            <p>Tokens OAuth chiffres avec DPAPI Windows. Aucune donnee envoyee a des tiers.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="privacy.html">Politique de confidentialite</a> | <a href="terms.html">Conditions d'utilisation</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2024-2026 LixiNest</p>
+    </footer>
+</body>
+</html>

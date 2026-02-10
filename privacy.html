@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LixiNest - Politique de confidentialit&eacute;</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #6ec6ff, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date { color: #606080; margin-bottom: 2rem; display: block; }
+        h2 {
+            color: #6ec6ff;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+        }
+        p, li { color: #c0c0d0; margin-bottom: 0.75rem; }
+        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.4rem; }
+        a { color: #6ec6ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-bottom: 2rem; }
+        .highlight {
+            background: #12122a;
+            border-left: 3px solid #6ec6ff;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #606080;
+            border-top: 1px solid #1a1a3a;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back">&larr; Retour</a>
+        <h1>Politique de confidentialit&eacute;</h1>
+        <span class="date">Derni&egrave;re mise &agrave; jour : 10 f&eacute;vrier 2026</span>
+
+        <div class="highlight">
+            <strong>En r&eacute;sum&eacute; :</strong> LixiNest ne collecte aucune donn&eacute;e personnelle, n'envoie rien &agrave; des tiers, et toutes les informations restent stock&eacute;es localement sur votre ordinateur, chiffr&eacute;es par Windows.
+        </div>
+
+        <h2>1. Pr&eacute;sentation</h2>
+        <p>LixiNest est une application de bureau Windows qui permet d'organiser les ic&ocirc;nes du bureau dans des zones visuelles et d'afficher des widgets (calendrier, t&acirc;ches, m&eacute;t&eacute;o, notes, horloge, moniteur syst&egrave;me).</p>
+        <p>Cette politique de confidentialit&eacute; d&eacute;crit comment LixiNest acc&egrave;de, utilise et prot&egrave;ge vos donn&eacute;es lorsque vous utilisez l'int&eacute;gration Google.</p>
+
+        <h2>2. Donn&eacute;es acc&eacute;d&eacute;es via Google</h2>
+        <p>Lorsque vous connectez votre compte Google, LixiNest demande l'acc&egrave;s aux services suivants :</p>
+        <ul>
+            <li><strong>Google Calendar</strong> (lecture et &eacute;criture) : pour afficher vos &eacute;v&eacute;nements dans le widget calendrier et cr&eacute;er des rappels depuis l'application.</li>
+            <li><strong>Google Tasks</strong> (lecture et &eacute;criture) : pour afficher vos t&acirc;ches dans le widget todo-list et permettre de cr&eacute;er, modifier et compl&eacute;ter des t&acirc;ches.</li>
+            <li><strong>Google Drive &mdash; donn&eacute;es d'application</strong> (drive.appdata) : pour synchroniser les param&egrave;tres et configurations de LixiNest entre plusieurs ordinateurs. Ce scope acc&egrave;de uniquement &agrave; un dossier cach&eacute; propre &agrave; LixiNest. <strong>Aucun fichier personnel de votre Google Drive n'est lu ni modifi&eacute;.</strong></li>
+        </ul>
+
+        <h2>3. Stockage des donn&eacute;es</h2>
+        <p>Toutes les donn&eacute;es sont stock&eacute;es <strong>localement sur votre ordinateur</strong> :</p>
+        <ul>
+            <li>Les tokens d'authentification Google sont chiffr&eacute;s avec <strong>Windows DPAPI</strong> (Data Protection API), li&eacute;s &agrave; votre session utilisateur Windows.</li>
+            <li>Les layouts, param&egrave;tres et configurations sont sauvegard&eacute;s dans <code>%APPDATA%/LixiNest/</code>.</li>
+            <li>La synchronisation cloud (optionnelle) utilise exclusivement le dossier cach&eacute; <code>appDataFolder</code> de votre propre Google Drive.</li>
+        </ul>
+
+        <h2>4. Donn&eacute;es NON collect&eacute;es</h2>
+        <p>LixiNest <strong>ne collecte pas</strong> :</p>
+        <ul>
+            <li>Aucune donn&eacute;e d'analyse ou de t&eacute;l&eacute;m&eacute;trie</li>
+            <li>Aucune information d'identification personnelle</li>
+            <li>Aucun cookie ou traceur</li>
+            <li>Aucune donn&eacute;e de localisation</li>
+        </ul>
+
+        <h2>5. Partage avec des tiers</h2>
+        <p><strong>Aucune donn&eacute;e n'est partag&eacute;e avec des tiers.</strong> LixiNest communique uniquement avec les APIs Google (Calendar, Tasks, Drive) en connexion directe depuis votre ordinateur. Aucun serveur interm&eacute;diaire n'est utilis&eacute;.</p>
+
+        <h2>6. Service m&eacute;t&eacute;o</h2>
+        <p>Le widget m&eacute;t&eacute;o utilise l'API publique <strong>Open-Meteo</strong> pour obtenir les pr&eacute;visions. Seules les coordonn&eacute;es g&eacute;ographiques de la ville configur&eacute;e sont envoy&eacute;es (pas de donn&eacute;e personnelle). Aucun compte n'est requis.</p>
+
+        <h2>7. R&eacute;vocation de l'acc&egrave;s</h2>
+        <p>Vous pouvez &agrave; tout moment :</p>
+        <ul>
+            <li><strong>D&eacute;connecter votre compte Google</strong> depuis les param&egrave;tres de LixiNest.</li>
+            <li><strong>R&eacute;voquer l'acc&egrave;s</strong> depuis votre compte Google : <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a>.</li>
+            <li><strong>Supprimer les donn&eacute;es locales</strong> en d&eacute;sinstallant l'application ou en supprimant le dossier <code>%APPDATA%/LixiNest/</code>.</li>
+        </ul>
+
+        <h2>8. S&eacute;curit&eacute;</h2>
+        <ul>
+            <li>Authentification OAuth 2.0 avec <strong>PKCE</strong> (Proof Key for Code Exchange)</li>
+            <li>Tokens chiffr&eacute;s avec <strong>DPAPI</strong> (li&eacute;s &agrave; votre session Windows)</li>
+            <li>Toutes les communications avec Google utilisent <strong>HTTPS</strong></li>
+            <li>Aucun mot de passe Google n'est stock&eacute; ni manipul&eacute; par LixiNest</li>
+        </ul>
+
+        <h2>9. Modifications</h2>
+        <p>Cette politique peut &ecirc;tre mise &agrave; jour. La date de derni&egrave;re modification est indiqu&eacute;e en haut de cette page.</p>
+
+        <h2>10. Contact</h2>
+        <p>Pour toute question concernant cette politique de confidentialit&eacute;, vous pouvez ouvrir une issue sur le d&eacute;p&ocirc;t GitHub du projet.</p>
+    </div>
+
+    <footer>
+        <p><a href="index.html">Accueil</a> | <a href="terms.html">Conditions d'utilisation</a></p>
+        <p style="margin-top: 0.5rem;">&copy; 2024-2026 LixiNest</p>
+    </footer>
+</body>
+</html>
