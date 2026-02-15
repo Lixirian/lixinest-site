@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LixiNest - Politique de confidentialit&eacute;</title>
+    <title>LixiNest - Privacy Policy</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -31,6 +31,12 @@
             margin-bottom: 0.75rem;
             font-size: 1.3rem;
         }
+        h3 {
+            color: #a0a0c0;
+            margin-top: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
         p, li { color: #c0c0d0; margin-bottom: 0.75rem; }
         ul { padding-left: 1.5rem; margin-bottom: 1rem; }
         li { margin-bottom: 0.4rem; }
@@ -44,6 +50,24 @@
             border-radius: 0 8px 8px 0;
             margin: 1rem 0;
         }
+        .lang-switch {
+            display: inline-flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .lang-switch a {
+            padding: 0.3rem 0.8rem;
+            border: 1px solid #6ec6ff;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        .lang-switch a.active {
+            background: #6ec6ff;
+            color: #0a0a1a;
+            font-weight: 600;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
         footer {
             text-align: center;
             padding: 2rem;
@@ -51,79 +75,239 @@
             border-top: 1px solid #1a1a3a;
             margin-top: 3rem;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.6rem 0.8rem;
+            border-bottom: 1px solid #1a1a3a;
+            color: #c0c0d0;
+        }
+        th {
+            color: #6ec6ff;
+            font-weight: 600;
+            background: #12122a;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back">&larr; Retour</a>
-        <h1>Politique de confidentialit&eacute;</h1>
-        <span class="date">Derni&egrave;re mise &agrave; jour : 10 f&eacute;vrier 2026</span>
+        <a href="index.html" class="back">&larr; Back / Retour</a>
 
-        <div class="highlight">
-            <strong>En r&eacute;sum&eacute; :</strong> LixiNest ne collecte aucune donn&eacute;e personnelle, n'envoie rien &agrave; des tiers, et toutes les informations restent stock&eacute;es localement sur votre ordinateur, chiffr&eacute;es par Windows.
+        <h1>Privacy Policy / Politique de confidentialit&eacute;</h1>
+        <span class="date">Last updated / Derni&egrave;re mise &agrave; jour : February 13, 2026</span>
+
+        <div class="lang-switch">
+            <a href="#" id="btn-en" class="active" onclick="switchLang('en'); return false;">English</a>
+            <a href="#" id="btn-fr" onclick="switchLang('fr'); return false;">Fran&ccedil;ais</a>
         </div>
 
-        <h2>1. Pr&eacute;sentation</h2>
-        <p>LixiNest est une application de bureau Windows qui permet d'organiser les ic&ocirc;nes du bureau dans des zones visuelles et d'afficher des widgets (calendrier, t&acirc;ches, m&eacute;t&eacute;o, notes, horloge, moniteur syst&egrave;me).</p>
-        <p>Cette politique de confidentialit&eacute; d&eacute;crit comment LixiNest acc&egrave;de, utilise et prot&egrave;ge vos donn&eacute;es lorsque vous utilisez l'int&eacute;gration Google.</p>
+        <!-- ==================== ENGLISH VERSION ==================== -->
+        <div id="lang-en" class="lang-section active">
 
-        <h2>2. Donn&eacute;es acc&eacute;d&eacute;es via Google</h2>
-        <p>Lorsque vous connectez votre compte Google, LixiNest demande l'acc&egrave;s aux services suivants :</p>
-        <ul>
-            <li><strong>Google Calendar</strong> (lecture et &eacute;criture) : pour afficher vos &eacute;v&eacute;nements dans le widget calendrier et cr&eacute;er des rappels depuis l'application.</li>
-            <li><strong>Google Tasks</strong> (lecture et &eacute;criture) : pour afficher vos t&acirc;ches dans le widget todo-list et permettre de cr&eacute;er, modifier et compl&eacute;ter des t&acirc;ches.</li>
-            <li><strong>Google Drive &mdash; donn&eacute;es d'application</strong> (drive.appdata) : pour synchroniser les param&egrave;tres et configurations de LixiNest entre plusieurs ordinateurs. Ce scope acc&egrave;de uniquement &agrave; un dossier cach&eacute; propre &agrave; LixiNest. <strong>Aucun fichier personnel de votre Google Drive n'est lu ni modifi&eacute;.</strong></li>
-        </ul>
+            <div class="highlight">
+                <strong>Summary:</strong> LixiNest does not collect any personal data, does not send anything to third parties, and all information remains stored locally on your computer, encrypted by Windows. LixiNest has no backend server.
+            </div>
 
-        <h2>3. Stockage des donn&eacute;es</h2>
-        <p>Toutes les donn&eacute;es sont stock&eacute;es <strong>localement sur votre ordinateur</strong> :</p>
-        <ul>
-            <li>Les tokens d'authentification Google sont chiffr&eacute;s avec <strong>Windows DPAPI</strong> (Data Protection API), li&eacute;s &agrave; votre session utilisateur Windows.</li>
-            <li>Les layouts, param&egrave;tres et configurations sont sauvegard&eacute;s dans <code>%APPDATA%/LixiNest/</code>.</li>
-            <li>La synchronisation cloud (optionnelle) utilise exclusivement le dossier cach&eacute; <code>appDataFolder</code> de votre propre Google Drive.</li>
-        </ul>
+            <h2>1. Overview</h2>
+            <p>LixiNest is a Windows desktop application that organizes desktop icons into visual zones and displays widgets (calendar, tasks, weather, notes, clock, system monitor). LixiNest also provides a companion Android application (LixiNest Calendar).</p>
+            <p>This privacy policy describes how LixiNest accesses, uses, stores, and protects your data when you use the Google integration.</p>
 
-        <h2>4. Donn&eacute;es NON collect&eacute;es</h2>
-        <p>LixiNest <strong>ne collecte pas</strong> :</p>
-        <ul>
-            <li>Aucune donn&eacute;e d'analyse ou de t&eacute;l&eacute;m&eacute;trie</li>
-            <li>Aucune information d'identification personnelle</li>
-            <li>Aucun cookie ou traceur</li>
-            <li>Aucune donn&eacute;e de localisation</li>
-        </ul>
+            <h2>2. Google User Data Accessed</h2>
+            <p>When you connect your Google account, LixiNest requests access to the following specific types of Google user data:</p>
 
-        <h2>5. Partage avec des tiers</h2>
-        <p><strong>Aucune donn&eacute;e n'est partag&eacute;e avec des tiers.</strong> LixiNest communique uniquement avec les APIs Google (Calendar, Tasks, Drive) en connexion directe depuis votre ordinateur. Aucun serveur interm&eacute;diaire n'est utilis&eacute;.</p>
+            <table>
+                <tr>
+                    <th>Google API Scope</th>
+                    <th>Data Accessed</th>
+                </tr>
+                <tr>
+                    <td><strong>Google Calendar</strong><br>(read &amp; write)</td>
+                    <td>Calendar event titles, dates, times, descriptions, and locations from your Google Calendar.</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Tasks</strong><br>(read &amp; write)</td>
+                    <td>Task lists, task titles, due dates, completion status, and notes from your Google Tasks.</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Drive &mdash; App Data</strong><br>(drive.appdata)</td>
+                    <td>Application configuration files stored in a hidden LixiNest-specific folder within your Google Drive. <strong>No personal Google Drive files are accessed, read, or modified.</strong></td>
+                </tr>
+            </table>
 
-        <h2>6. Service m&eacute;t&eacute;o</h2>
-        <p>Le widget m&eacute;t&eacute;o utilise l'API publique <strong>Open-Meteo</strong> pour obtenir les pr&eacute;visions. Seules les coordonn&eacute;es g&eacute;ographiques de la ville configur&eacute;e sont envoy&eacute;es (pas de donn&eacute;e personnelle). Aucun compte n'est requis.</p>
+            <h2>3. How Google User Data Is Used</h2>
+            <p>LixiNest uses the Google user data it accesses <strong>solely</strong> for the following purposes:</p>
+            <ul>
+                <li><strong>Google Calendar data</strong> is used to display your upcoming events in the calendar widget on your desktop and to create reminders from within the application. Data is fetched on demand and cached locally for display.</li>
+                <li><strong>Google Tasks data</strong> is used to display your task lists in the to-do widget, and to allow you to create, edit, and complete tasks directly from your desktop. Changes are synced back to Google Tasks.</li>
+                <li><strong>Google Drive App Data</strong> is used exclusively to synchronize LixiNest settings (layouts, widget configurations, preferences) between multiple computers you own. Only LixiNest configuration files are stored in this hidden folder.</li>
+            </ul>
+            <p>LixiNest does <strong>not</strong> use Google user data for advertising, profiling, analytics, or any purpose other than providing the application's core functionality as described above.</p>
 
-        <h2>7. R&eacute;vocation de l'acc&egrave;s</h2>
-        <p>Vous pouvez &agrave; tout moment :</p>
-        <ul>
-            <li><strong>D&eacute;connecter votre compte Google</strong> depuis les param&egrave;tres de LixiNest.</li>
-            <li><strong>R&eacute;voquer l'acc&egrave;s</strong> depuis votre compte Google : <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a>.</li>
-            <li><strong>Supprimer les donn&eacute;es locales</strong> en d&eacute;sinstallant l'application ou en supprimant le dossier <code>%APPDATA%/LixiNest/</code>.</li>
-        </ul>
+            <h2>4. Data Sharing with Third Parties</h2>
+            <p><strong>LixiNest does not share any Google user data with any third parties.</strong></p>
+            <ul>
+                <li>LixiNest communicates directly with Google APIs (Calendar, Tasks, Drive) from your computer. <strong>No intermediate server is used.</strong></li>
+                <li>No user data is sent to the developer, to analytics services, to advertising networks, or to any other entity.</li>
+                <li>The weather widget uses the public <strong>Open-Meteo</strong> API to fetch forecasts. Only the geographic coordinates of the configured city are sent (no personal data, no Google data). No account is required.</li>
+            </ul>
 
-        <h2>8. S&eacute;curit&eacute;</h2>
-        <ul>
-            <li>Authentification OAuth 2.0 avec <strong>PKCE</strong> (Proof Key for Code Exchange)</li>
-            <li>Tokens chiffr&eacute;s avec <strong>DPAPI</strong> (li&eacute;s &agrave; votre session Windows)</li>
-            <li>Toutes les communications avec Google utilisent <strong>HTTPS</strong></li>
-            <li>Aucun mot de passe Google n'est stock&eacute; ni manipul&eacute; par LixiNest</li>
-        </ul>
+            <h2>5. Data Storage and Protection</h2>
+            <p>All data is stored <strong>locally on your computer</strong>. LixiNest has no backend server and no database.</p>
+            <ul>
+                <li><strong>OAuth tokens</strong> (access token and refresh token) are encrypted using <strong>Windows DPAPI</strong> (Data Protection API), which ties the encryption to your Windows user session. The tokens cannot be decrypted on another computer or by another Windows user.</li>
+                <li><strong>Cached data</strong> (calendar events, tasks) is stored in plain JSON files in <code>%APPDATA%/LixiNest/</code> on your local machine.</li>
+                <li><strong>Cloud sync</strong> (optional) uses exclusively the hidden <code>appDataFolder</code> of your own Google Drive. Only LixiNest configuration files are stored there.</li>
+                <li>All communications with Google APIs use <strong>HTTPS/TLS</strong> encryption.</li>
+                <li>Authentication uses <strong>OAuth 2.0 with PKCE</strong> (Proof Key for Code Exchange). LixiNest never sees, stores, or handles your Google password.</li>
+            </ul>
 
-        <h2>9. Modifications</h2>
-        <p>Cette politique peut &ecirc;tre mise &agrave; jour. La date de derni&egrave;re modification est indiqu&eacute;e en haut de cette page.</p>
+            <h2>6. Data Retention and Deletion</h2>
+            <h3>Retention</h3>
+            <ul>
+                <li>Google OAuth tokens are retained locally until you disconnect your Google account from LixiNest or uninstall the application.</li>
+                <li>Cached calendar events and tasks are refreshed periodically and overwritten with fresh data from Google. They are not retained beyond the application's runtime needs.</li>
+                <li>Cloud sync data (in Google Drive appDataFolder) is retained until you delete it or disconnect your account.</li>
+            </ul>
 
-        <h2>10. Contact</h2>
-        <p>Pour toute question concernant cette politique de confidentialit&eacute;, vous pouvez ouvrir une issue sur le d&eacute;p&ocirc;t GitHub du projet.</p>
+            <h3>How to Delete Your Data</h3>
+            <p>You can delete all your data at any time through any of the following methods:</p>
+            <ul>
+                <li><strong>Disconnect your Google account</strong> from LixiNest settings &mdash; this deletes all local tokens and cached Google data.</li>
+                <li><strong>Uninstall LixiNest</strong> &mdash; this removes all local application data including tokens, cache, and settings.</li>
+                <li><strong>Manually delete</strong> the folder <code>%APPDATA%/LixiNest/</code> to remove all local data.</li>
+                <li><strong>Revoke access</strong> from your Google account at <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a> &mdash; this invalidates all tokens and prevents further access.</li>
+                <li><strong>Delete cloud sync data</strong> by using Google Drive's hidden app data management, or by revoking LixiNest's access (which prevents further syncing).</li>
+            </ul>
+
+            <h2>7. Data NOT Collected</h2>
+            <p>LixiNest does <strong>not</strong> collect:</p>
+            <ul>
+                <li>No analytics or telemetry data</li>
+                <li>No personally identifiable information</li>
+                <li>No cookies or tracking mechanisms</li>
+                <li>No location data (the weather widget uses a manually configured city, not your device location)</li>
+                <li>No usage statistics</li>
+            </ul>
+
+            <h2>8. Changes to This Policy</h2>
+            <p>This privacy policy may be updated. The last modification date is indicated at the top of this page. Continued use of LixiNest after changes constitutes acceptance of the updated policy.</p>
+
+            <h2>9. Contact</h2>
+            <p>For any questions regarding this privacy policy, you can open an issue on the project's GitHub repository: <a href="https://github.com/Lixirian/LixiNest" target="_blank">github.com/Lixirian/LixiNest</a></p>
+        </div>
+
+        <!-- ==================== VERSION FRANCAISE ==================== -->
+        <div id="lang-fr" class="lang-section">
+
+            <div class="highlight">
+                <strong>En r&eacute;sum&eacute; :</strong> LixiNest ne collecte aucune donn&eacute;e personnelle, n'envoie rien &agrave; des tiers, et toutes les informations restent stock&eacute;es localement sur votre ordinateur, chiffr&eacute;es par Windows. LixiNest n'a aucun serveur backend.
+            </div>
+
+            <h2>1. Pr&eacute;sentation</h2>
+            <p>LixiNest est une application de bureau Windows qui permet d'organiser les ic&ocirc;nes du bureau dans des zones visuelles et d'afficher des widgets (calendrier, t&acirc;ches, m&eacute;t&eacute;o, notes, horloge, moniteur syst&egrave;me). LixiNest propose &eacute;galement une application Android compagnon (LixiNest Calendar).</p>
+            <p>Cette politique de confidentialit&eacute; d&eacute;crit comment LixiNest acc&egrave;de, utilise, stocke et prot&egrave;ge vos donn&eacute;es lorsque vous utilisez l'int&eacute;gration Google.</p>
+
+            <h2>2. Donn&eacute;es Google acc&eacute;d&eacute;es</h2>
+            <p>Lorsque vous connectez votre compte Google, LixiNest demande l'acc&egrave;s aux types de donn&eacute;es suivants :</p>
+
+            <table>
+                <tr>
+                    <th>Scope API Google</th>
+                    <th>Donn&eacute;es acc&eacute;d&eacute;es</th>
+                </tr>
+                <tr>
+                    <td><strong>Google Calendar</strong><br>(lecture &amp; &eacute;criture)</td>
+                    <td>Titres, dates, heures, descriptions et lieux des &eacute;v&eacute;nements de votre Google Calendar.</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Tasks</strong><br>(lecture &amp; &eacute;criture)</td>
+                    <td>Listes de t&acirc;ches, titres, dates d'&eacute;ch&eacute;ance, statut de compl&eacute;tion et notes de vos Google Tasks.</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Drive &mdash; App Data</strong><br>(drive.appdata)</td>
+                    <td>Fichiers de configuration stock&eacute;s dans un dossier cach&eacute; propre &agrave; LixiNest dans votre Google Drive. <strong>Aucun fichier personnel de votre Google Drive n'est acc&eacute;d&eacute;, lu ou modifi&eacute;.</strong></td>
+                </tr>
+            </table>
+
+            <h2>3. Utilisation des donn&eacute;es Google</h2>
+            <p>LixiNest utilise les donn&eacute;es Google <strong>uniquement</strong> aux fins suivantes :</p>
+            <ul>
+                <li><strong>Donn&eacute;es Google Calendar</strong> : afficher vos &eacute;v&eacute;nements &agrave; venir dans le widget calendrier sur votre bureau et cr&eacute;er des rappels depuis l'application. Les donn&eacute;es sont r&eacute;cup&eacute;r&eacute;es &agrave; la demande et mises en cache localement pour l'affichage.</li>
+                <li><strong>Donn&eacute;es Google Tasks</strong> : afficher vos listes de t&acirc;ches dans le widget todo-list et vous permettre de cr&eacute;er, modifier et compl&eacute;ter des t&acirc;ches directement depuis votre bureau. Les modifications sont synchronis&eacute;es avec Google Tasks.</li>
+                <li><strong>Google Drive App Data</strong> : synchroniser les param&egrave;tres de LixiNest (layouts, configurations des widgets, pr&eacute;f&eacute;rences) entre plusieurs ordinateurs. Seuls les fichiers de configuration LixiNest sont stock&eacute;s dans ce dossier cach&eacute;.</li>
+            </ul>
+            <p>LixiNest <strong>n'utilise pas</strong> les donn&eacute;es Google pour la publicit&eacute;, le profilage, l'analyse ou tout autre objectif que les fonctionnalit&eacute;s de base de l'application d&eacute;crites ci-dessus.</p>
+
+            <h2>4. Partage avec des tiers</h2>
+            <p><strong>LixiNest ne partage aucune donn&eacute;e Google avec des tiers.</strong></p>
+            <ul>
+                <li>LixiNest communique directement avec les APIs Google (Calendar, Tasks, Drive) depuis votre ordinateur. <strong>Aucun serveur interm&eacute;diaire n'est utilis&eacute;.</strong></li>
+                <li>Aucune donn&eacute;e utilisateur n'est envoy&eacute;e au d&eacute;veloppeur, &agrave; des services d'analyse, &agrave; des r&eacute;gies publicitaires ou &agrave; toute autre entit&eacute;.</li>
+                <li>Le widget m&eacute;t&eacute;o utilise l'API publique <strong>Open-Meteo</strong> pour les pr&eacute;visions. Seules les coordonn&eacute;es g&eacute;ographiques de la ville configur&eacute;e sont envoy&eacute;es (pas de donn&eacute;e personnelle, pas de donn&eacute;e Google).</li>
+            </ul>
+
+            <h2>5. Stockage et protection des donn&eacute;es</h2>
+            <p>Toutes les donn&eacute;es sont stock&eacute;es <strong>localement sur votre ordinateur</strong>. LixiNest n'a aucun serveur backend ni base de donn&eacute;es.</p>
+            <ul>
+                <li><strong>Tokens OAuth</strong> (access token et refresh token) sont chiffr&eacute;s avec <strong>Windows DPAPI</strong> (Data Protection API), li&eacute;s &agrave; votre session utilisateur Windows. Les tokens ne peuvent pas &ecirc;tre d&eacute;chiffr&eacute;s sur un autre ordinateur ou par un autre utilisateur Windows.</li>
+                <li><strong>Donn&eacute;es en cache</strong> (&eacute;v&eacute;nements, t&acirc;ches) sont stock&eacute;es en fichiers JSON dans <code>%APPDATA%/LixiNest/</code> sur votre machine locale.</li>
+                <li><strong>Synchronisation cloud</strong> (optionnelle) utilise exclusivement le dossier cach&eacute; <code>appDataFolder</code> de votre propre Google Drive.</li>
+                <li>Toutes les communications avec les APIs Google utilisent le chiffrement <strong>HTTPS/TLS</strong>.</li>
+                <li>L'authentification utilise <strong>OAuth 2.0 avec PKCE</strong> (Proof Key for Code Exchange). LixiNest ne voit, ne stocke et ne manipule jamais votre mot de passe Google.</li>
+            </ul>
+
+            <h2>6. Conservation et suppression des donn&eacute;es</h2>
+            <h3>Conservation</h3>
+            <ul>
+                <li>Les tokens OAuth Google sont conserv&eacute;s localement jusqu'&agrave; ce que vous d&eacute;connectiez votre compte Google de LixiNest ou d&eacute;sinstalliez l'application.</li>
+                <li>Les &eacute;v&eacute;nements et t&acirc;ches en cache sont rafra&icirc;chis p&eacute;riodiquement et remplac&eacute;s par les donn&eacute;es fra&icirc;ches de Google. Ils ne sont pas conserv&eacute;s au-del&agrave; des besoins de l'application.</li>
+                <li>Les donn&eacute;es de synchronisation cloud (dans le dossier appDataFolder de Google Drive) sont conserv&eacute;es jusqu'&agrave; ce que vous les supprimiez ou d&eacute;connectiez votre compte.</li>
+            </ul>
+
+            <h3>Comment supprimer vos donn&eacute;es</h3>
+            <p>Vous pouvez supprimer toutes vos donn&eacute;es &agrave; tout moment par l'une des m&eacute;thodes suivantes :</p>
+            <ul>
+                <li><strong>D&eacute;connecter votre compte Google</strong> depuis les param&egrave;tres de LixiNest &mdash; cela supprime tous les tokens locaux et les donn&eacute;es Google en cache.</li>
+                <li><strong>D&eacute;sinstaller LixiNest</strong> &mdash; cela supprime toutes les donn&eacute;es locales de l'application, y compris les tokens, le cache et les param&egrave;tres.</li>
+                <li><strong>Supprimer manuellement</strong> le dossier <code>%APPDATA%/LixiNest/</code> pour effacer toutes les donn&eacute;es locales.</li>
+                <li><strong>R&eacute;voquer l'acc&egrave;s</strong> depuis votre compte Google &agrave; <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a> &mdash; cela invalide tous les tokens et emp&ecirc;che tout acc&egrave;s ult&eacute;rieur.</li>
+                <li><strong>Supprimer les donn&eacute;es de synchronisation cloud</strong> en utilisant la gestion des donn&eacute;es d'application cach&eacute;es de Google Drive, ou en r&eacute;voquant l'acc&egrave;s de LixiNest.</li>
+            </ul>
+
+            <h2>7. Donn&eacute;es NON collect&eacute;es</h2>
+            <p>LixiNest <strong>ne collecte pas</strong> :</p>
+            <ul>
+                <li>Aucune donn&eacute;e d'analyse ou de t&eacute;l&eacute;m&eacute;trie</li>
+                <li>Aucune information d'identification personnelle</li>
+                <li>Aucun cookie ou traceur</li>
+                <li>Aucune donn&eacute;e de localisation (le widget m&eacute;t&eacute;o utilise une ville configur&eacute;e manuellement, pas la localisation de votre appareil)</li>
+                <li>Aucune statistique d'utilisation</li>
+            </ul>
+
+            <h2>8. Modifications</h2>
+            <p>Cette politique peut &ecirc;tre mise &agrave; jour. La date de derni&egrave;re modification est indiqu&eacute;e en haut de cette page. L'utilisation continue de LixiNest apr&egrave;s les modifications constitue l'acceptation de la politique mise &agrave; jour.</p>
+
+            <h2>9. Contact</h2>
+            <p>Pour toute question concernant cette politique de confidentialit&eacute;, vous pouvez ouvrir une issue sur le d&eacute;p&ocirc;t GitHub du projet : <a href="https://github.com/Lixirian/LixiNest" target="_blank">github.com/Lixirian/LixiNest</a></p>
+        </div>
     </div>
 
     <footer>
-        <p><a href="index.html">Accueil</a> | <a href="terms.html">Conditions d'utilisation</a></p>
+        <p><a href="index.html">Home / Accueil</a> | <a href="terms.html">Terms / Conditions</a></p>
         <p style="margin-top: 0.5rem;">&copy; 2024-2026 LixiNest</p>
     </footer>
+
+    <script>
+        function switchLang(lang) {
+            document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-fr').classList.toggle('active', lang === 'fr');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+        }
+    </script>
 </body>
 </html>
