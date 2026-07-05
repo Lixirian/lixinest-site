@@ -1,0 +1,5 @@
+{
+  "version": "1.3.0",
+  "downloadUrl": "https://lixirian.github.io/lixinest-site/",
+  "notes": "4 nouveaux widgets (Pomodoro, Presse-papiers, Launcher, RSS), vue agenda semaine avec création par glisser, capture automatique par règles, zones-portail, recherche rapide (Ctrl+Shift+F), bulles flottantes pour Post-it et TodoList, layouts commutables, historique et chiffrement de la synchronisation, mises à jour automatiques."
+}
