@@ -1,5 +1,5 @@
 {
-  "version": "1.4.5",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.5/LixiNest-Setup-1.4.5-x64.exe",
-  "notes": "Correctif : les zones ne réapparaissaient plus après une synchro Google Drive (elles restaient masquées alors que les widgets revenaient). Elles sont désormais rechargées et redessinées automatiquement après chaque synchro."
+  "version": "1.4.6",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.6/LixiNest-Setup-1.4.6-x64.exe",
+  "notes": "Correctif : la recherche rapide (Ctrl+Shift+F) provoquait une erreur en ouvrant une icône système (Corbeille, Ce PC...). La fenêtre de recherche ne se ferme plus deux fois."
 }
