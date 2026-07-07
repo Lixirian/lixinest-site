@@ -1,6 +1,6 @@
 {
-  "versionCode": 19,
-  "versionName": "1.5.12",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.12/LixiNest-Calendar-1.5.12.apk",
-  "notes": "Widgets Mois et Mois + liste : la pleine lune est désormais marquée sur toute sa fenêtre (~3 jours), comme dans le calendrier de l'app, et non plus sur un seul jour."
+  "versionCode": 20,
+  "versionName": "1.5.13",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.13/LixiNest-Calendar-1.5.13.apk",
+  "notes": "Nouveau : watcher de mise à jour en avant-plan. Tant que l'app reste ouverte, elle revérifie GitHub toutes les 30 min et propose la mise à jour, sans avoir à la fermer/rouvrir."
 }
