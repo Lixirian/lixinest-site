@@ -1,5 +1,5 @@
 {
-  "version": "1.4.1",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.1/LixiNest-Setup-1.4.1-x64.exe",
-  "notes": "Activation de la mise à jour automatique du bureau. Téléchargez pour installer la 1.4.1 (l'installateur ferme et relance LixiNest automatiquement)."
+  "version": "1.4.2",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.2/LixiNest-Setup-1.4.2-x64.exe",
+  "notes": "Correctif : les widgets en bulle flottante (Calendrier, Post-it, Tâches) se relancent bien en bulle après extinction du PC. Le vérificateur de mises à jour tourne désormais toutes les 30 minutes."
 }
