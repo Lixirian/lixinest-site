@@ -1,6 +1,6 @@
 {
-  "versionCode": 11,
-  "versionName": "1.5.4",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.4/LixiNest-Calendar-1.5.4.apk",
-  "notes": "Mise à jour automatique intégrée, sonnerie par défaut commune (personnalisable par alarme) et écran de réveil redessiné."
+  "versionCode": 12,
+  "versionName": "1.5.5",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.5/LixiNest-Calendar-1.5.5.apk",
+  "notes": "Validation de la mise à jour automatique. Au lancement, un message indique s'il faut autoriser l'installation d'applis inconnues."
 }
