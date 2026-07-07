@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
-  "downloadUrl": "https://lixirian.github.io/lixinest-site/",
-  "notes": "4 nouveaux widgets (Pomodoro, Presse-papiers, Launcher, RSS), vue agenda semaine avec création par glisser, capture automatique par règles, zones-portail, recherche rapide (Ctrl+Shift+F), bulles flottantes pour Post-it et TodoList, layouts commutables, historique et chiffrement de la synchronisation, mises à jour automatiques."
+  "version": "1.4.1",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.1/LixiNest-Setup-1.4.1-x64.exe",
+  "notes": "Activation de la mise à jour automatique du bureau. Téléchargez pour installer la 1.4.1 (l'installateur ferme et relance LixiNest automatiquement)."
 }
