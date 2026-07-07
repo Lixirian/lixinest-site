@@ -1,6 +1,6 @@
 {
-  "versionCode": 14,
-  "versionName": "1.5.7",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.7/LixiNest-Calendar-1.5.7.apk",
-  "notes": "Écran de chargement avec barre de progression pendant le téléchargement de la mise à jour."
+  "versionCode": 15,
+  "versionName": "1.5.8",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.8/LixiNest-Calendar-1.5.8.apk",
+  "notes": "La permission notifications n'est plus redemandée à chaque démarrage. Écran de chargement pendant le téléchargement des mises à jour."
 }
