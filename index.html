@@ -145,12 +145,48 @@
         }
         .cta-box p { color: #a0a0b8; margin-bottom: 1rem; font-size: 1.1rem; }
         .cta-box .emoji-row { font-size: 1.5rem; letter-spacing: 0.5rem; }
+
+        .downloads {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .dl-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.35rem;
+            text-decoration: none;
+            background: linear-gradient(135deg, #1a1a3e, #12122a);
+            border: 1px solid #3a3a6a;
+            border-radius: 14px;
+            padding: 1.25rem 2.25rem;
+            min-width: 240px;
+            transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        }
+        .dl-btn:hover {
+            border-color: #6ec6ff;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(110, 198, 255, 0.15);
+        }
+        .dl-btn-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #6ec6ff, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dl-btn-sub { color: #a0a0b8; font-size: 0.85rem; }
+        .dl-btn-version { color: #7070a0; font-size: 0.8rem; }
     </style>
 </head>
 <body>
     <nav class="nav">
         <a href="index.html" class="nav-brand"><img src="logo.png" alt="LixiNest"> LixiNest</a>
         <div class="nav-links">
+            <a href="#telecharger">T&eacute;l&eacute;charger</a>
             <a href="privacy.html">Confidentialit&eacute;</a>
             <a href="terms.html">Conditions</a>
         </div>
@@ -226,12 +262,37 @@
         </a>
     </div>
 
-    <div class="cta">
+    <div class="cta" id="telecharger">
         <div class="cta-box">
-            <p>🪺 Application de bureau Windows gratuite</p>
+            <p>🪺 Applications gratuites — t&eacute;l&eacute;chargement direct</p>
             <div class="emoji-row">📂 📅 ✅ 🌤️ 📝 ⏰</div>
+            <div class="downloads">
+                <a href="download-windows.html" class="dl-btn">
+                    <span class="dl-btn-title">🖥️ LixiNest pour Windows</span>
+                    <span class="dl-btn-sub">Organisateur de bureau &middot; installateur .exe</span>
+                    <span class="dl-btn-version" id="win-version">Windows 10/11 x64</span>
+                </a>
+                <a href="download-android.html" class="dl-btn">
+                    <span class="dl-btn-title">📱 LixiNest Calendar pour Android</span>
+                    <span class="dl-btn-sub">Widgets calendrier + r&eacute;veil &middot; APK sign&eacute;</span>
+                    <span class="dl-btn-version" id="android-version">Android 8+</span>
+                </a>
+            </div>
         </div>
     </div>
+
+    <script>
+        fetch('version.json', { cache: 'no-store' })
+            .then(function (r) { return r.json(); })
+            .then(function (d) {
+                document.getElementById('win-version').textContent = 'v' + d.version + ' — Windows 10/11 x64';
+            }).catch(function () {});
+        fetch('latest.json', { cache: 'no-store' })
+            .then(function (r) { return r.json(); })
+            .then(function (d) {
+                document.getElementById('android-version').textContent = 'v' + d.versionName + ' — Android 8+';
+            }).catch(function () {});
+    </script>
 
     <footer>
         <p>

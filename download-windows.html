@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Téléchargement LixiNest pour Windows</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dl-wrap {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        .dl-wrap img { width: 72px; height: 72px; margin-bottom: 1.5rem; }
+        .dl-wrap h1 { color: #6ec6ff; font-size: 1.6rem; margin-bottom: 0.75rem; }
+        .dl-wrap p { color: #a0a0b8; max-width: 480px; margin-bottom: 1rem; }
+        .dl-wrap a { color: #a78bfa; }
+        .dl-version { color: #7070a0; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="dl-wrap">
+        <img src="logo.png" alt="LixiNest">
+        <h1>⬇️ Téléchargement de LixiNest pour Windows…</h1>
+        <p id="dl-status">Récupération de la dernière version…</p>
+        <p class="dl-version" id="dl-version"></p>
+        <p><a href="index.html">&larr; Retour au site</a></p>
+    </div>
+    <script>
+        fetch('version.json', { cache: 'no-store' })
+            .then(function (r) { return r.json(); })
+            .then(function (d) {
+                document.getElementById('dl-version').textContent = 'Version ' + d.version;
+                document.getElementById('dl-status').innerHTML =
+                    'Le téléchargement démarre automatiquement. Sinon, <a href="' + d.downloadUrl + '">cliquez ici</a>.';
+                window.location.href = d.downloadUrl;
+            })
+            .catch(function () {
+                document.getElementById('dl-status').innerHTML =
+                    'Impossible de récupérer la dernière version. Consultez les <a href="https://github.com/Lixirian/lixinest-site/releases">releases GitHub</a>.';
+            });
+    </script>
+</body>
+</html>
