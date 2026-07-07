@@ -1,5 +1,5 @@
 {
-  "version": "1.4.2",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.2/LixiNest-Setup-1.4.2-x64.exe",
-  "notes": "Correctif : les widgets en bulle flottante (Calendrier, Post-it, Tâches) se relancent bien en bulle après extinction du PC. Le vérificateur de mises à jour tourne désormais toutes les 30 minutes."
+  "version": "1.4.3",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.3/LixiNest-Setup-1.4.3-x64.exe",
+  "notes": "Image d'installation : le logo LixiNest et « Organisateur de bureau » passent en haut du visuel Matrix (au lieu du bas)."
 }
