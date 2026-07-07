@@ -1,5 +1,5 @@
 {
-  "version": "1.4.3",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.3/LixiNest-Setup-1.4.3-x64.exe",
-  "notes": "Image d'installation : le logo LixiNest et « Organisateur de bureau » passent en haut du visuel Matrix (au lieu du bas)."
+  "version": "1.4.4",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.4/LixiNest-Setup-1.4.4-x64.exe",
+  "notes": "Correctif : les widgets rapatriés par la synchro Google Drive comme visibles ne réapparaissaient plus (marqués visibles mais sans fenêtre). Ils sont désormais réaffichés automatiquement après chaque synchro."
 }
