@@ -1,5 +1,5 @@
 {
-  "version": "1.4.6",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.6/LixiNest-Setup-1.4.6-x64.exe",
-  "notes": "Correctif : la recherche rapide (Ctrl+Shift+F) provoquait une erreur en ouvrant une icône système (Corbeille, Ce PC...). La fenêtre de recherche ne se ferme plus deux fois."
+  "version": "1.4.7",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.4.7/LixiNest-Setup-1.4.7-x64.exe",
+  "notes": "Correctif : les profils d'affichage multi-écrans n'étaient pas appliqués après une synchro Google Drive (importés mais jamais appliqués). La synchro applique désormais le profil de l'écran courant."
 }
