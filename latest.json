@@ -1,6 +1,6 @@
 {
-  "versionCode": 16,
-  "versionName": "1.5.9",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.9/LixiNest-Calendar-1.5.9.apk",
-  "notes": "L'écran de réveil s'affiche par-dessus le verrouillage via « Afficher par-dessus les autres applications » — à autoriser une seule fois, ça persiste après les mises à jour."
+  "versionCode": 17,
+  "versionName": "1.5.10",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.10/LixiNest-Calendar-1.5.10.apk",
+  "notes": "Après cette mise à jour, l'alarme doit toujours s'afficher par-dessus le verrouillage sans nouvelle autorisation. Le bandeau Réveil aide à débloquer « Afficher par-dessus » si Android la verrouille."
 }
