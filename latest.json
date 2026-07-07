@@ -1,6 +1,6 @@
 {
-  "versionCode": 13,
-  "versionName": "1.5.6",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.6/LixiNest-Calendar-1.5.6.apk",
-  "notes": "Le popup de mise à jour apparaît au démarrage et au retour d'avant-plan, dès qu'une nouvelle version est disponible."
+  "versionCode": 14,
+  "versionName": "1.5.7",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.7/LixiNest-Calendar-1.5.7.apk",
+  "notes": "Écran de chargement avec barre de progression pendant le téléchargement de la mise à jour."
 }
