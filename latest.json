@@ -1,6 +1,6 @@
 {
-  "versionCode": 15,
-  "versionName": "1.5.8",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.8/LixiNest-Calendar-1.5.8.apk",
-  "notes": "La permission notifications n'est plus redemandée à chaque démarrage. Écran de chargement pendant le téléchargement des mises à jour."
+  "versionCode": 16,
+  "versionName": "1.5.9",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.5.9/LixiNest-Calendar-1.5.9.apk",
+  "notes": "L'écran de réveil s'affiche par-dessus le verrouillage via « Afficher par-dessus les autres applications » — à autoriser une seule fois, ça persiste après les mises à jour."
 }
