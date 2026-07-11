@@ -1,6 +1,6 @@
 {
-  "versionCode": 22,
-  "versionName": "1.6.0",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.6.0/LixiNest-Calendar-1.6.0.apk",
-  "notes": "Nouveau : météo géolocalisée — l'app et le widget Heure + météo suivent votre position (réglage « Suivre ma position », activé par défaut), avec un widget rafraîchi toutes les 15 min. Un appui sur un jour des widgets Mois, Mois + liste et Semaine ouvre une fenêtre listant les événements et tâches du jour sans lancer l'app ; l'en-tête du mois ouvre le calendrier. Corrigé : la pastille « aujourd'hui » ne masque plus les marqueurs (événements, vacances) de son propre jour."
+  "versionCode": 23,
+  "versionName": "1.6.1",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.6.1/LixiNest-Calendar-1.6.1.apk",
+  "notes": "Nouveau : sur le widget Heure + météo, un appui sur la météo ouvre l'app sur l'onglet Météo, un appui sur l'heure ouvre la page Réveil. Corrigé : la petite fenêtre « détails du jour » des widgets calendrier ne ramène plus l'app au premier plan quand elle tourne en arrière-plan — seule la fenêtre s'affiche, comme prévu."
 }
