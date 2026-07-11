@@ -1,6 +1,6 @@
 {
-  "versionCode": 25,
-  "versionName": "1.7.1",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.7.1/LixiNest-Calendar-1.7.1.apk",
-  "notes": "Corrigé : les filtres « Tout / Actives / Terminées » de l'onglet Tâches s'affichent de nouveau correctement (la puce sélectionnée restait verte et la nouvelle devenait illisible). Rappel 1.7.0 : nouveaux widgets Tâches et Notes avec vos données LixiNest synchronisées via Drive — appui → petite fenêtre sans lancer l'app, tâches cochables directement."
+  "versionCode": 26,
+  "versionName": "1.8.0",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.8.0/LixiNest-Calendar-1.8.0.apk",
+  "notes": "Nouveau : changez la police d'écriture de toute l'app ! Paramètres → Apparence → « Police d'écriture » : 6 polices en plus d'Open Sans — Poppins (moderne), Montserrat (élégante), Nunito (arrondie), Caveat (manuscrite), Orbitron (futuriste) et Share Tech Mono (terminal). Chaque puce est affichée dans sa propre police pour choisir d'un coup d'œil, et l'application est instantanée."
 }
