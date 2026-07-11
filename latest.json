@@ -1,6 +1,6 @@
 {
-  "versionCode": 26,
-  "versionName": "1.8.0",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.8.0/LixiNest-Calendar-1.8.0.apk",
-  "notes": "Nouveau : changez la police d'écriture de toute l'app ! Paramètres → Apparence → « Police d'écriture » : 6 polices en plus d'Open Sans — Poppins (moderne), Montserrat (élégante), Nunito (arrondie), Caveat (manuscrite), Orbitron (futuriste) et Share Tech Mono (terminal). Chaque puce est affichée dans sa propre police pour choisir d'un coup d'œil, et l'application est instantanée."
+  "versionCode": 27,
+  "versionName": "1.8.1",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.8.1/LixiNest-Calendar-1.8.1.apk",
+  "notes": "10 polices artistiques supplémentaires dans Paramètres → Apparence (17 choix au total) : Lobster (script rétro), Pacifico (script décontracté), Dancing Script (calligraphie), Great Vibes (calligraphie chic), Amatic SC (dessinée à la main), Bangers (bande dessinée), Press Start 2P (pixel rétro), Monoton (néon), Special Elite (machine à écrire) et Rye (western)."
 }
