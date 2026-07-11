@@ -1,6 +1,6 @@
 {
-  "versionCode": 23,
-  "versionName": "1.6.1",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.6.1/LixiNest-Calendar-1.6.1.apk",
-  "notes": "Nouveau : sur le widget Heure + météo, un appui sur la météo ouvre l'app sur l'onglet Météo, un appui sur l'heure ouvre la page Réveil. Corrigé : la petite fenêtre « détails du jour » des widgets calendrier ne ramène plus l'app au premier plan quand elle tourne en arrière-plan — seule la fenêtre s'affiche, comme prévu."
+  "versionCode": 24,
+  "versionName": "1.7.0",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.7.0/LixiNest-Calendar-1.7.0.apk",
+  "notes": "Nouveau : widgets Tâches et Notes sur l'écran d'accueil, avec vos données LixiNest synchronisées via Google Drive avec le bureau. Un appui ouvre une petite fenêtre sans lancer l'app : les tâches s'y cochent directement (la modification repart vers le bureau à la prochaine synchro), les notes s'y lisent en entier. Tâches triées par échéance et priorité (🔴 urgente, 🟠 haute, ⚠️ en retard), notes épinglées en premier avec leur couleur de post-it."
 }
