@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.6.0/LixiNest-Setup-1.6.0-x64.exe",
-  "notes": "Nouveau : fenêtre Paramètres centralisée (menu de l'icône système → ⚙ Paramètres…) avec taille de texte globale en plus de la police ; layouts liés aux profils d'affichage — brancher ou débrancher un écran rebascule automatiquement sur le layout associé ; historique de synchronisation accessible depuis le menu (10 versions conservées sur Drive, restauration en un clic). Corrigé : la synchronisation cloud des réglages ne fonctionnait pas — vos réglages suivent désormais réellement votre compte Google Drive."
+  "version": "1.7.0",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.7.0/LixiNest-Setup-1.7.0-x64.exe",
+  "notes": "Nouveau : badge de mise à jour sur les widgets ! Quand une nouvelle version est publiée, une pastille ⬆ apparaît en haut à droite de chaque widget visible sur le bureau — cliquez dessus pour ouvrir directement la fenêtre de mise à jour et installer en un clic. La pastille disparaît si vous choisissez d'ignorer la version."
 }
