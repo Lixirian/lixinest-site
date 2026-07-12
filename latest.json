@@ -1,6 +1,6 @@
 {
-  "versionCode": 29,
-  "versionName": "1.9.1",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.1/LixiNest-Calendar-1.9.1.apk",
-  "notes": "La case du widget Tâches devient un vrai toggle : les tâches terminées aujourd'hui restent affichées en bas du widget (grisées ☑) et se décochent d'un simple appui — pratique pour rattraper un cochage accidentel."
+  "versionCode": 30,
+  "versionName": "1.9.2",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.2/LixiNest-Calendar-1.9.2.apk",
+  "notes": "Le widget Heure + météo remplit maintenant sa cellule : l'heure s'adapte automatiquement à l'espace disponible (agrandissez le widget, elle grossit !), la météo est affichée plus grande et les marges sont réduites."
 }
