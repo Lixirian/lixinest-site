@@ -1,5 +1,5 @@
 {
-  "version": "1.7.1",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.7.1/LixiNest-Setup-1.7.1-x64.exe",
-  "notes": "Petite mise à jour de démonstration : elle fait apparaître le nouveau badge ⬆ sur vos widgets (introduit en 1.7.0) — cliquez sur la pastille d'un widget pour installer directement. Aucun autre changement."
+  "version": "1.7.2",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.7.2/LixiNest-Setup-1.7.2-x64.exe",
+  "notes": "Le badge de mise à jour des widgets affiche désormais le numéro de version : une pilule « ⬆ MAJ v1.7.2 » apparaît en haut à droite des widgets quand une nouvelle version est disponible — cliquez dessus pour installer directement."
 }
