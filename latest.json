@@ -1,6 +1,6 @@
 {
-  "versionCode": 32,
-  "versionName": "1.9.4",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.4/LixiNest-Calendar-1.9.4.apk",
-  "notes": "Tâches plus pratiques : la case à cocher du widget est bien plus facile à toucher, les tâches terminées du jour restent décochables dans la fenêtre du widget, et un crayon ✏️ permet de modifier le texte d'une tâche — depuis le widget comme dans l'app."
+  "versionCode": 33,
+  "versionName": "1.9.5",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.5/LixiNest-Calendar-1.9.5.apk",
+  "notes": "Diagnostic de synchronisation Google : les Paramètres affichent le compte réellement connecté et alertent si l'accès Drive n'a pas été accordé ; en cas d'échec de synchro, le message indique désormais la cause exacte."
 }
