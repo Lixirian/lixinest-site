@@ -1,6 +1,6 @@
 {
-  "versionCode": 31,
-  "versionName": "1.9.3",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.3/LixiNest-Calendar-1.9.3.apk",
-  "notes": "Écriture agrandie (~+25 %) sur les widgets Tâches, Notes et Aujourd'hui — plus besoin de plisser les yeux. La date du widget Heure + météo grossit maintenant avec le widget, comme l'heure. Le réglage « Taille du texte des widgets » s'applique toujours en plus."
+  "versionCode": 32,
+  "versionName": "1.9.4",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.4/LixiNest-Calendar-1.9.4.apk",
+  "notes": "Tâches plus pratiques : la case à cocher du widget est bien plus facile à toucher, les tâches terminées du jour restent décochables dans la fenêtre du widget, et un crayon ✏️ permet de modifier le texte d'une tâche — depuis le widget comme dans l'app."
 }
