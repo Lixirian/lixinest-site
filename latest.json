@@ -1,6 +1,6 @@
 {
-  "versionCode": 36,
-  "versionName": "1.9.8",
-  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.8/LixiNest-Calendar-1.9.8.apk",
-  "notes": "L'adresse du compte Google connecté s'affiche désormais dès l'ouverture de l'application dans les Paramètres (plus de « vérification… » qui persiste)."
+  "versionCode": 37,
+  "versionName": "1.9.9",
+  "apkUrl": "https://github.com/Lixirian/lixinest-site/releases/download/calendar-v1.9.9/LixiNest-Calendar-1.9.9.apk",
+  "notes": "Plus de déconnexion Google silencieuse : si la session expire, l'application la conserve et vous propose de vous reconnecter à l'ouverture (reconnexion automatique si vous acceptez)."
 }

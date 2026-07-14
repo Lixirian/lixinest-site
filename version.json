@@ -1,5 +1,5 @@
 {
-  "version": "1.7.2",
-  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.7.2/LixiNest-Setup-1.7.2-x64.exe",
-  "notes": "Le badge de mise à jour des widgets affiche désormais le numéro de version : une pilule « ⬆ MAJ v1.7.2 » apparaît en haut à droite des widgets quand une nouvelle version est disponible — cliquez dessus pour installer directement."
+  "version": "1.7.3",
+  "downloadUrl": "https://github.com/Lixirian/lixinest-site/releases/download/desktop-v1.7.3/LixiNest-Setup-1.7.3-x64.exe",
+  "notes": "Synchronisation plus fiable : la réception des tâches et notes du mobile démarre désormais même si Google Drive était injoignable au lancement de l'application, et se rétablit toute seule dès le retour du réseau."
 }
